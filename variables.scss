@@ -1,0 +1,33 @@
+// color variables
+$color-white: #ffffff;
+$color-gray1: #e7e7e7;
+$color-gray2: #e2e2e2;
+$color-gray3: #cfcfcf;
+$color-gray4: #a4a4a4;
+$color-gray5: #3e3e3e;
+$color-bg: #272727;
+$color-blue: #d6e2ff;
+
+//breakpoint variables
+$breakpoint-desktop: 1025px;
+$breakpoint-tablet: 758px;
+$breakpoint-mobile: 300px;
+
+//반응형 믹스인
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
